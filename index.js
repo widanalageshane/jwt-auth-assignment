@@ -10,9 +10,11 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
+// ------------------- HardCoded Database -------------------
+
 const SECRET_KEY = process.env.SECRET_KEY || 'secret';
 const REFRESH_SECRET = process.env.REFRESH_SECRET || 'refresh_secret';
-const users = [{ username: 'hello', password: 'world', role: 'admin' }];
+const users = [{ username: 'Shane', password: 'Shane@123', role: 'admin' }];
 let refreshTokens = [];
 
 // Basic Authentication Middleware
